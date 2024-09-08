@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\DB;
  *      title="API WEB",
  *      description="Estudo da Tecnologia - Banco de Dados I",
  *      @OA\Contact(
- *          email="darius@matulionis.lt"
+ *          email="jmatheus_21@academico.ufs.br"
  *      ),
  *     @OA\License(
  *         name="Apache 2.0",
@@ -43,7 +43,7 @@ class UserController extends Controller
     /**
      * @OA\Post(
      *     path="/api/users",
-     *     description="Criar um novo usuário",
+     *     description="Cadastrar novo usuário",
      *     @OA\RequestBody(
      *         required=true,
      *         @OA\JsonContent(
