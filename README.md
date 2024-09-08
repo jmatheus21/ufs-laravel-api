@@ -2,11 +2,11 @@
 
 ## Ferramentas
 
-Laravel - 11.9
+Laravel - 11.22.0
 
-PHP - 8.2 
+PHP - 8.2.12
 
-L5-Swagger - 8.6 
+L5-Swagger - 8.6.2
 
 Composer - 2.7.6
 

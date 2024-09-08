@@ -24,7 +24,7 @@
                 }
             },
             "post": {
-                "description": "Criar um novo usuário",
+                "description": "Cadastrar novo usuário",
                 "operationId": "be551c1d694a01c164966f58bfa77013",
                 "requestBody": {
                     "required": true,
