@@ -3,13 +3,17 @@
 ## Ferramentas
 
 Laravel - 11.9
-PHP - 8.2
-L5-Swagger - 8.6
+
+PHP - 8.2 
+
+L5-Swagger - 8.6 
+
 Composer - 2.7.6
 
 ## Rotas
 
 Requisição GET - http://localhost:8000/api/users/
+
 Requisição POST - http://localhost:8000/api/users/
 
 Documentação SWAGGER - http://localhost:8000/api/documentation/
