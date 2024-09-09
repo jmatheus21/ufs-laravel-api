@@ -33,7 +33,9 @@ class UserController extends Controller
      * )
      */
     public function index () : JsonResponse {
+        // pega os usuários e ordena pelo CPF
         $users = User::orderby('cpf', 'DESC')->get();
+        // retorna os usuários ordenados
         return response()->json([
             'status' => true,
             'users' => $users
@@ -58,18 +60,22 @@ class UserController extends Controller
      * )
      */
     public function store (UserRequest $request) : JsonResponse {
+
+        // inicia a transação no banco de dados
         DB::beginTransaction();
 
         try {
-            
+            // cria o usuário com as informação passadas no request
             $user = User::create([
                 'cpf' => $request->cpf,
                 'nome' => $request->nome,
                 'data_nascimento' => $request->data_nascimento
             ]);
 
+            // faz o commit no banco de dados
             DB::commit();
 
+            // retorna uma mensagem de confirmação
             return response()->json([
                 'status' => true,
                 'user' => $user,
@@ -77,8 +83,11 @@ class UserController extends Controller
             ], 201);
             
         } catch(Exception $e) {
+            
+            // realiza rollback no banco de dados caso o commit não tenha funcionado
             DB::rollBack();
 
+            // retorna uma mensagem de erro
             return response()->json([
                 'status' => false,
                 'message' => 'Usuário não cadastrado'
